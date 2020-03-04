@@ -62,7 +62,7 @@ public class ProfitEditFragment extends Fragment {
 
 
 
-        View v = inflater.inflate(R.layout.fragment_profits_edit, container, false);
+        View v = inflater.inflate(R.layout.profit_fragment_edit, container, false);
 
 
         //FAH 3/1/2020: getting the old data

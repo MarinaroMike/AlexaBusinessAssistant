@@ -41,7 +41,7 @@ public class ProfitsAddFragments extends Fragment {
     // TODO FAH 2/24/2020: this fragment will open where the add button clicks click still need to create add button to the toolbar
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_profits_add, container, false);
+        View v = inflater.inflate(R.layout.profit_fragment_add, container, false);
         // FAH 2/16/2020: if the text if change in the text box then it will be set here
         mNameField = v.findViewById(R.id.profit_add_Firstname);
         mNameField.addTextChangedListener(new TextWatcher() {

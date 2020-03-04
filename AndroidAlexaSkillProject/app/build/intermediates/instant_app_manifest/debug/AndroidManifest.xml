@@ -30,6 +30,16 @@
         </activity>
         <activity android:name="com.example.androidalexaskillproject.MainActivity" >
         </activity>
+        <activity android:name="com.example.androidalexaskillproject.ProfitReturnAddFragment" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.ProfitReturnEditFragment" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.ExpenseListActivity" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.ExpenseReturnAddFragment" >
+        </activity>
+        <activity android:name="com.example.androidalexaskillproject.ExpenseReturnEditFragment" >
+        </activity>
     </application>
 
 </manifest>

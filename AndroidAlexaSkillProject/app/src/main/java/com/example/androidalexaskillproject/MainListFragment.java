@@ -1,25 +1,14 @@
 package com.example.androidalexaskillproject;
 
-import android.content.Context;
 import android.content.Intent;
-import android.icu.util.ULocale;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -44,7 +33,7 @@ public class MainListFragment extends Fragment {
 
 
 
-        View view = inflater.inflate(R.layout.main_list_fragment, container, false);
+        View view = inflater.inflate(R.layout.profit_list_fragment, container, false);
 
         mProfitRecyclerView = view.findViewById(R.id.profits_recycler_view);
         mProfitRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -87,7 +76,7 @@ public class MainListFragment extends Fragment {
         private Profits mProfit;
 
         public Viewholder(LayoutInflater inflater, ViewGroup parent) {
-            super(inflater.inflate(R.layout.list_view_items, parent, false));
+            super(inflater.inflate(R.layout.profit_list_view_items, parent, false));
             itemView.setOnClickListener(this);
             mNameProfits = itemView.findViewById(R.id.name_list);
             MValueProfits = itemView.findViewById(R.id.profit_list);

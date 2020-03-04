@@ -11,8 +11,9 @@
             <item android:id="@+id/Profit_list"
                 android:title="Profit List"/>
 
-            <item android:id="@+id/subitem2_list"
-                android:title="Sub Item 2"/>
+            <item android:id="@+id/Expense_list"
+                android:title="Expense List"
+                app:showAsAction="never"/>
 
         </menu>menu>
     </item>

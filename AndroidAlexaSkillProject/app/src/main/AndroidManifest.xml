@@ -25,6 +25,14 @@
         <activity android:name=".ProfitReturnEditFragment">
         </activity>
 
+        <activity android:name=".ExpenseListActivity">
+        </activity>
+        <activity android:name=".ExpenseReturnAddFragment">
+        </activity>
+
+        <activity android:name=".ExpenseReturnEditFragment">
+        </activity>
+
     </application>
 
 </manifest>

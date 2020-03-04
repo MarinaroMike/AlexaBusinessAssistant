@@ -5,8 +5,6 @@ import android.net.Uri;
 import android.net.http.HttpResponseCache;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,14 +13,7 @@ import android.widget.EditText;
 
 import androidx.fragment.app.Fragment;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.concurrent.ExecutionException;
@@ -55,7 +46,7 @@ public class ProfitsDeleteFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_delete_profits, container, false);
+        View v = inflater.inflate(R.layout.profit_fragment_delete, container, false);
 
         mNameField = v.findViewById(R.id.profit_name_delete);
         mNameField.setEnabled(false);

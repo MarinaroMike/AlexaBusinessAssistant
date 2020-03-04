@@ -62,8 +62,10 @@ public abstract class SingleFragmentActivty extends AppCompatActivity {
                 startActivity(ProfitListintent);
                 return true;
 
-            case R.id.subitem2_list:
-                Toast.makeText(this, "Item 2 selected", Toast.LENGTH_SHORT).show();
+            case R.id.Expense_list:
+                Toast.makeText(this, "Expense Selected", Toast.LENGTH_SHORT).show();
+                Intent ExpenseListintent = new Intent(this, ExpenseListActivity.class);
+                startActivity(ExpenseListintent);
                 return true;
 
                 default:
