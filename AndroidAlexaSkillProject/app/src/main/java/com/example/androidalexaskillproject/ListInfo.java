@@ -17,19 +17,20 @@ import java.util.List;
 
 public class ListInfo {
 
+    //M. Marinaro 3/4/20 : Abstracted to just 'sheet' as this will display any url sheet it is given
 
     // FAH 2/22/2020: this list is where we will store the sheet data
     public static ArrayList<String> InfoListView = new ArrayList<>();
 public static  int counter = 0;
     private static ListInfo sListInfo;
-    private List<Profits> mProfits;
+    private List<Sheet> mSheets;
 
 
     private ListInfo(Context context) {
-        mProfits = new ArrayList<>();
+        mSheets = new ArrayList<>();
 
         for (int i = 0; i < InfoListView.size() - 1; i++) {
-            Profits _profits = new Profits();
+            Sheet _sheets = new Sheet();
             //FAH2/23/2020: getting the sheet info this will update the ui list
             String line = InfoListView.get(i);
             //FAH2/23/2020: spliting the list by a "
@@ -38,12 +39,12 @@ public static  int counter = 0;
             Datesplitted[0] = Datesplitted[0].substring(0,Datesplitted[0].length() - 3);
 
             //Fah 2/23/2020: this is name and value of the row in the list then will add it to
-            //mProfits
-            _profits.setmName(splitted[3]);
-            _profits.setmLastname(splitted[7]);
-            _profits.setmAmount(splitted[10].replaceAll(":", "").replaceAll("\\," , ""));
-            _profits.setmDate(Datesplitted[0]);
-            mProfits.add(_profits);
+            //mSheets
+            _sheets.setmName(splitted[3]);
+            _sheets.setmLastname(splitted[7]);
+            _sheets.setmAmount(splitted[10].replaceAll(":", "").replaceAll("\\," , ""));
+            _sheets.setmDate(Datesplitted[0]);
+            mSheets.add(_sheets);
         }
 
 
@@ -58,9 +59,9 @@ public static  int counter = 0;
     }
 
 
-    public List<Profits> getInfo() {
+    public List<Sheet> getInfo() {
 
-        return mProfits;
+        return mSheets;
 
     }
 
@@ -79,8 +80,8 @@ public static  int counter = 0;
 
 
             try {
-                URL url = new URL(
-                        "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id=1KE91K1eYxlfSV9gHfI1LBNaCtAS_c-o8rTF92NlEWvg&sheet=profits");
+                URL url = new URL(                                                                                          //M.Marinaro 3/6/20 : get the current sheet url and name
+                        "https://script.google.com/macros/s/AKfycbzRJecRXqinxLQxHRix6F3JmjHso5NyxNgXABdWrDIhwjM4UvY/exec?id="+ SheetRepository.getInstance().getSheetUrl()+"&sheet=" + SheetRepository.getInstance().getSheetName());
                 urlConnection = (HttpURLConnection) url.openConnection();
 
                 int code = urlConnection.getResponseCode();

@@ -133,8 +133,8 @@ public class ProfitsDeleteFragment extends Fragment {
                     ReturnList();
 
                 }
-            }, 4000 );
-            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbyqn1fD46kgkDbscsaJ61pTG9ln9lKqE4pS9ZzaLCe2oVILr_Wg/exec?sheetname=profits&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
+            }, 4000 );                                              //M.Marinaro 3/6/20 : Use the current url and sheetname
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse(SheetRepository.getInstance().getSheetCodeUrl() + "?sheetname=" +  SheetRepository.getInstance().getSheetName() +"&AddDelete=delete&Firstname=" + mProfits.getmName() + "&LastName=" + mProfits.getmLastname()
                     +"&profit=" + mProfits.getmAmount() +"&Date=" + mProfits.getmDate()));
             startActivity(intentClick);
 

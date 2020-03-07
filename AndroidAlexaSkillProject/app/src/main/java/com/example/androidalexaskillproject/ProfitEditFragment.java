@@ -210,8 +210,8 @@ public class ProfitEditFragment extends Fragment {
                     ReturnList();
 
                 }
-            }, 4000);
-            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbwI9wvauddFIGMMUNrqqtb5aXXURM3_Jo468jxTsWGe/dev?sheetname=profits&AddDelete=edit&Firstname="+
+            }, 4000);                                                                                                                                                       //M.Marinaro 3/5/20 : Use the current sheetname
+            Intent intentClick = new Intent(Intent.ACTION_VIEW, Uri.parse("https://script.google.com/macros/s/AKfycbwI9wvauddFIGMMUNrqqtb5aXXURM3_Jo468jxTsWGe/dev?sheetname="+ SheetRepository.getInstance().getSheetName() + "&AddDelete=edit&Firstname="+
                     OldFirsteName.toString() +"&LastName=" + OldLastName.toString() + "&profit=" + OldAmount.toString() +
                     "&Date=" + OldDate.toString() + "&EditFirstName="+ mProfits.getmName()+
                     "&EditLastName=" + mProfits.getmLastname() +  "&EditProfit=" + mProfits.getmAmount()+"&EditDate=" + mProfits.getmDate()));
